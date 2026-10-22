@@ -1,0 +1,9 @@
+*.fasl
+.cl-repository/
+_apalache-out/
+cl-repo.lock
+.qlot/
+*.dx64fsl
+*.lx64fsl
+*.wx64fsl
+.DS_Store
