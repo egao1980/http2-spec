@@ -1,0 +1,16 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    uses: egao1980/cl-repository/.github/workflows/test-system.yml@main
+    with:
+      system: http2-spec
+      # http2/core (fork driver) needs the OCI mgl-pax/dref/autoload, see scripts/ci/pre-install.lisp
+      extra-with: mgl-pax dref autoload
